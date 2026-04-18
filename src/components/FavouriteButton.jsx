@@ -1,8 +1,19 @@
 import "./FavouriteButton.css";
+import { useRef, useEffect } from "react";
 
 export default function FavouriteButton({ isFavourited, onToggle }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    const stop = (e) => e.stopPropagation();
+    el.addEventListener("pointerdown", stop);
+    return () => el.removeEventListener("pointerdown", stop);
+  }, []);
+
   return (
     <button
+      ref={ref}
       className="favourite-btn"
       type="button"
       aria-pressed={isFavourited}
