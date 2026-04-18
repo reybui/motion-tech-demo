@@ -1,5 +1,6 @@
 import "./FavouriteButton.css";
 import { useRef, useEffect } from "react";
+import { motion } from "motion/react";
 
 export default function FavouriteButton({ isFavourited, onToggle }) {
   const ref = useRef(null);
@@ -12,7 +13,7 @@ export default function FavouriteButton({ isFavourited, onToggle }) {
   }, []);
 
   return (
-    <button
+    <motion.button
       ref={ref}
       className="favourite-btn"
       type="button"
@@ -22,6 +23,9 @@ export default function FavouriteButton({ isFavourited, onToggle }) {
         onToggle();
       }}
       aria-label={isFavourited ? "Remove from favourites" : "Add to favourites"}
+      animate={{ scale: isFavourited ? 1.2 : 1 }}
+      transition={{ type: "spring", stiffness: 300, damping: 5 }}
+      whileTap={{ scale: 0.9, transition: { ease: "easeIn", duration: 0.2 } }}
     >
       <svg
         className="favourite-btn__icon"
@@ -37,6 +41,6 @@ export default function FavouriteButton({ isFavourited, onToggle }) {
           strokeLinejoin="round"
         />
       </svg>
-    </button>
+    </motion.button>
   );
 }

@@ -1,5 +1,6 @@
 import FavouriteButton from "./FavouriteButton.jsx";
 import "./GameCard.css";
+import { motion, scale } from "motion/react";
 
 const genreColours = {
   Action: "#c0392b",
@@ -18,11 +19,33 @@ export default function GameCard({
 }) {
   const colour = genreColours[game.genre] ?? "#555";
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+    hover: { scale: 1.03 },
+    tap: { scale: 0.97 },
+    exit: { opacity: 0, scale: 0.9 },
+  };
+
   return (
-    <div className="game-card" onClick={onClick}>
+    <motion.div
+      className="game-card"
+      onClick={onClick}
+      variants={cardVariants}
+      // initial={"hidden"}
+      // animate={"visible"}
+      whileHover={"hover"}
+      whileTap={"tap"}
+      exit={"exit"}
+      // transition={{ duration: 0.3, ease: "easeOut" }}
+    >
       <div className="game-card__cover" style={{ "--genre-color": colour }}>
         {game.cover ? (
-          <img src={game.cover} alt={game.title} className="game-card__cover-img" />
+          <img
+            src={game.cover}
+            alt={game.title}
+            className="game-card__cover-img"
+          />
         ) : (
           game.title[0]
         )}
@@ -47,6 +70,6 @@ export default function GameCard({
           <span className="game-card__rating">{game.rating} / 10</span>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
