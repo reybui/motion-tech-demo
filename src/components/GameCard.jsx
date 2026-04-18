@@ -21,7 +21,11 @@ export default function GameCard({
   return (
     <div className="game-card" onClick={onClick}>
       <div className="game-card__cover" style={{ "--genre-color": colour }}>
-        {game.title[0]}
+        {game.cover ? (
+          <img src={game.cover} alt={game.title} className="game-card__cover-img" />
+        ) : (
+          game.title[0]
+        )}
       </div>
 
       <div className="game-card__info">

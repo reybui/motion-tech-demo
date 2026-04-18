@@ -8,15 +8,24 @@
 .filter-bar__btn {
   padding: 6px 16px;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   cursor: pointer;
-  background: #fff;
-  color: #333;
+  background: var(--bg-surface);
+  color: var(--text-secondary);
   font-weight: normal;
+  font-family: inherit;
+  font-size: 0.85rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.filter-bar__btn:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
 }
 
 .filter-bar__btn.active {
-  background: #333;
-  color: #fff;
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
   font-weight: bold;
 }

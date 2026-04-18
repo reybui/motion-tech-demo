@@ -9,7 +9,8 @@
 }
 
 .detail-panel {
-  background: #fff;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 32px;
   max-width: 480px;
@@ -26,6 +27,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   line-height: 1;
+  color: var(--text-secondary);
 }
 
 .detail-panel__title {
@@ -33,7 +35,7 @@
 }
 
 .detail-panel__description {
-  color: #555;
+  color: var(--text-secondary);
   margin-top: 0;
 }
 
@@ -44,6 +46,6 @@
 
 .detail-panel__table td:first-child {
   padding: 4px 8px 4px 0;
-  color: #888;
+  color: var(--text-muted);
   font-weight: bold;
 }
