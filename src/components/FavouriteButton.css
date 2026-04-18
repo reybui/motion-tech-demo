@@ -1,8 +1,26 @@
 .favourite-btn {
-  background: none;
+  --favourite-color: #e11d48;
+  --favourite-muted: #94a3b8;
+
+  background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 1.4rem;
-  padding: 4px;
-  line-height: 1;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--favourite-muted);
+  flex: 0 0 auto;
+}
+
+.favourite-btn[aria-pressed="true"] {
+  color: var(--favourite-color);
+}
+
+.favourite-btn__icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
 }
