@@ -1,0 +1,8 @@
+.favourite-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 4px;
+  line-height: 1;
+}

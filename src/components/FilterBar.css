@@ -1,0 +1,22 @@
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.filter-bar__btn {
+  padding: 6px 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: #fff;
+  color: #333;
+  font-weight: normal;
+}
+
+.filter-bar__btn.active {
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+}

@@ -1,0 +1,49 @@
+.detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.detail-panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 480px;
+  width: 90%;
+  position: relative;
+}
+
+.detail-panel__close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.detail-panel__title {
+  margin-top: 0;
+}
+
+.detail-panel__description {
+  color: #555;
+  margin-top: 0;
+}
+
+.detail-panel__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.detail-panel__table td:first-child {
+  padding: 4px 8px 4px 0;
+  color: #888;
+  font-weight: bold;
+}
