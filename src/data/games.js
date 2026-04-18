@@ -8,6 +8,16 @@ import lastOfUs from "../assets/7.jpg";
 import sekiro from "../assets/8.jpg";
 import subnautica from "../assets/9.jpg";
 import gtaV from "../assets/10.jpg";
+import rocketLeague from "../assets/11.jpg";
+import overwatch from "../assets/12.jpg";
+import redDead from "../assets/13.jpg";
+import fortnite from "../assets/14.jpg";
+import valorant from "../assets/15.jpg";
+import league from "../assets/16.jpg";
+import cod from "../assets/17.jpg";
+import battlefield from "../assets/18.jpg";
+import balatro from "../assets/19.jpg";
+import cyberpunk from "../assets/20.jpg";
 
 export const games = [
   {
@@ -120,6 +130,116 @@ export const games = [
     description:
       "An open-world action-adventure game set in the fictional state of San Andreas.",
   },
+  {
+    id: 11,
+    title: "Rocket League",
+    genre: "Sports",
+    rating: 8.8,
+    year: 2015,
+    developer: "Psyonix",
+    cover: rocketLeague,
+    description:
+      "A high-octane hybrid of soccer and vehicular mayhem with rocket-powered cars.",
+  },
+  {
+    id: 12,
+    title: "Overwatch 2",
+    genre: "Shooter",
+    rating: 7.9,
+    year: 2022,
+    developer: "Blizzard",
+    cover: overwatch,
+    description:
+      "A team-based hero shooter with a roster of unique characters and abilities.",
+  },
+  {
+    id: 13,
+    title: "Red Dead Redemption 2",
+    genre: "Action",
+    rating: 9.7,
+    year: 2018,
+    developer: "Rockstar Games",
+    cover: redDead,
+    description:
+      "An epic tale of outlaw life in America's unforgiving heartland at the turn of the century.",
+  },
+  {
+    id: 14,
+    title: "Fortnite",
+    genre: "Shooter",
+    rating: 7.5,
+    year: 2017,
+    developer: "Epic Games",
+    cover: fortnite,
+    description:
+      "A battle royale phenomenon where 100 players fight to be the last one standing.",
+  },
+  {
+    id: 15,
+    title: "Valorant",
+    genre: "Shooter",
+    rating: 8.2,
+    year: 2020,
+    developer: "Riot Games",
+    cover: valorant,
+    description:
+      "A precise 5v5 tactical shooter where agents with unique abilities clash in high-stakes rounds.",
+  },
+  {
+    id: 16,
+    title: "League of Legends",
+    genre: "Strategy",
+    rating: 8.1,
+    year: 2009,
+    developer: "Riot Games",
+    cover: league,
+    description:
+      "The world's most popular MOBA — two teams of five champions battle to destroy the enemy Nexus.",
+  },
+  {
+    id: 17,
+    title: "Call of Duty: Black Ops 6",
+    genre: "Shooter",
+    rating: 8.0,
+    year: 2024,
+    developer: "Treyarch",
+    cover: cod,
+    description:
+      "A fast-paced military shooter with an omnimovement system and a gripping Cold War-era campaign.",
+  },
+  {
+    id: 18,
+    title: "Battlefield 6",
+    genre: "Shooter",
+    rating: 7.8,
+    year: 2025,
+    developer: "DICE",
+    cover: battlefield,
+    description:
+      "Large-scale combined-arms warfare returns with destructible environments and massive multiplayer battles.",
+  },
+  {
+    id: 19,
+    title: "Balatro",
+    genre: "Indie",
+    rating: 9.4,
+    year: 2024,
+    developer: "LocalThunk",
+    cover: balatro,
+    description:
+      "A hypnotic poker-based roguelike where you build wild hands and break the rules of the game.",
+  },
+  {
+    id: 20,
+    title: "Cyberpunk 2077",
+    genre: "RPG",
+    rating: 8.8,
+    year: 2020,
+    developer: "CD Projekt Red",
+    cover: cyberpunk,
+    description:
+      "An open-world RPG set in the dystopian Night City where you carve your own path as a mercenary.",
+  },
 ];
 
 export const genres = [
@@ -130,4 +250,6 @@ export const genres = [
   "Sandbox",
   "Indie",
   "Strategy",
+  "Shooter",
+  "Sports",
 ];
