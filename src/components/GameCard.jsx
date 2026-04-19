@@ -1,7 +1,9 @@
 import FavouriteButton from "./FavouriteButton.jsx";
 import "./GameCard.css";
+// "scale" import is unused here — variants handle scaling via named states instead
 import { motion, scale } from "motion/react";
 
+// Maps each genre to a colour used for the cover background and badge
 const genreColours = {
   Action: "#c0392b",
   RPG: "#8e44ad",
@@ -19,12 +21,16 @@ export default function GameCard({
 }) {
   const colour = genreColours[game.genre] ?? "#555";
 
+  // Variants group all animation states in one object.
+  // The parent (motion.div in CardGrid) passes "hidden"/"visible" down automatically,
+  // so the card inherits the staggered entrance without needing its own initial/animate.
+  // whileHover and whileTap reference named states here for a subtle scale effect.
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
     hover: { scale: 1.03 },
     tap: { scale: 0.97 },
-    exit: { opacity: 0, scale: 0.9 },
+    exit: { opacity: 0, scale: 0.9 }, // plays when AnimatePresence removes this card
   };
 
   return (

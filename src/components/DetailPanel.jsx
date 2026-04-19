@@ -6,6 +6,9 @@ export default function DetailPanel({ game, onClose }) {
 
   return (
     <div className="detail-overlay" onClick={onClose}>
+      {/* layoutId must match the layoutId on the card in CardGrid.
+          Motion automatically animates the size, position, and shape between
+          the card thumbnail and this expanded panel — no keyframes needed. */}
       <motion.div
         className="detail-panel"
         onClick={(e) => e.stopPropagation()}

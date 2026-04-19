@@ -3,6 +3,8 @@ import { useRef, useEffect } from "react";
 import { motion } from "motion/react";
 
 export default function FavouriteButton({ isFavourited, onToggle }) {
+  // Ref used to attach a native pointerdown listener that stops the event
+  // bubbling up to the card's onClick (which would open the detail panel).
   const ref = useRef(null);
 
   useEffect(() => {
@@ -13,6 +15,10 @@ export default function FavouriteButton({ isFavourited, onToggle }) {
   }, []);
 
   return (
+    // motion.button replaces a plain <button> so we can animate it directly.
+    // animate drives a spring bounce whenever isFavourited changes — the button
+    // scales up to 1.2 when favourited and back to 1 when unfavourited.
+    // whileTap gives immediate tactile feedback on press, independent of animate.
     <motion.button
       ref={ref}
       className="favourite-btn"
@@ -24,6 +30,7 @@ export default function FavouriteButton({ isFavourited, onToggle }) {
       }}
       aria-label={isFavourited ? "Remove from favourites" : "Add to favourites"}
       animate={{ scale: isFavourited ? 1.2 : 1 }}
+      // Spring physics (stiffness + damping) produce the bouncy "pop" feel
       transition={{ type: "spring", stiffness: 300, damping: 5 }}
       whileTap={{ scale: 0.9, transition: { ease: "easeIn", duration: 0.2 } }}
     >
